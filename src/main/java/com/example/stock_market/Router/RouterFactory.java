@@ -16,8 +16,8 @@ public class RouterFactory {
 
   public Future<Router> setupRoutes() {
     Router router = Router.router(vertx);
-    router.get("/api/stocks/:symbol").handler(routerHandler::fetchSingleStockPrice);
-    router.get("/api/stocks/:symbol/history").handler(routerHandler::fetchStockHistory);
+    router.get("/api/stocks/symbol").handler(routerHandler::fetchSingleStockPrice);
+    router.get("/api/stocks/symbol/history").handler(routerHandler::fetchStockHistory);
     return Future.succeededFuture(router);
   }
 }
